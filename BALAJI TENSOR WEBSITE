@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            TENSOR website
+        </title>
+      <style>
+.aligncenterandfill {
+    text-align: center;
+background: linear-gradient(to right,rgb(0,255,0),white,rgb(0,255,0));
+box-shadow: 4px 4px  black;
+}
+.align-left{
+text-align: left;
+
+}
+.align-right{
+padding:10px 200px 15px 900px;
+}
+</style>
+</head>
+<body style="background:linear-gradient(to right,rgb(60,179,113),rgb(152,251,152));">
+<div class= aligncenterandfill>
+            <img src = "C:\Users\PUPS\Downloads\logo tensor.png " width="150"  height = "25" >
+   </div>
+<div class= align-left>
+            <img src = "C:\Users\PUPS\Downloads\main page logo.png "width="400"  height = "300" >
+           
+   </div>
+<hr style="height:2px;border-width:0;color:black;background-color:black">
+<div class= align-right>
+<form onclick="disable()" onsubmit="Validation()">
+<fieldset >
+<label for ="fname">First name:</label><br>
+<input type ="text"id="fname" name="fname" size="50" value=""><br><br>
+<label for ="lname">Last name:</label><br>
+<input type ="text" id="lname" name="lname" size="50"value=""><br><br>
+<label for ="Pword">Password:</label><br>
+<input type ="password" id="Pword" name="Pword" size="50" value=""><br><br>
+<input type ="checkbox" id="Check me" name="Check me" value="Check me">
+<label for ="Check me">Check me</label><br><br>
+<input type ="submit" id="Submit" value="Submit"
+style="background-color:#FF6347;" disabled>
+</fieldset>
+</form>
+</div>
+
+<script>
+function disable(){
+if (document.getElementById("Check me").checked == true)
+document.getElementById("Submit").disabled = false;
+else
+document.getElementById("btnSubmit").disabled = true;
+}
+function Validation() {
+var FIRSTNAME=document.getElementById("fname").value;
+var LASTNAME=document.getElementById("lname").value;
+var PASSWORD=document.getElementById("Pword").value;
+
+FINAL=FIRSTNAME+'@'+LASTNAME;
+
+if(PASSWORD===FINAL){
+alert("success");
+}
+else{
+alert("Error");
+}
+}
+</script>
+   </body>
+</html>                   
